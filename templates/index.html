@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}List Content{% endblock %}
+{% block content %}
+<section class="contact-select">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-12 col-lg-5">
+        <div class="card text-center">
+          <div class="card-header pt-3 pb-3">
+            <h1>Select Content</h1>
+          </div>
+          <div class="card-body">
+            <select class="form-select form-select-lg" id="select-content" aria-label=".form-select-lg example">
+              <option selected>Select Contact</option>
+            </select>
+
+          </div>
+          <div class="card-footer text-muted pt-3 pb-3">
+            <a class="btn btn-primary" id="full-detail">See Full Details</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block extrascript %}
+<script>
+  data = JSON.parse(`{{ data | safe }}`)
+  data.forEach((key, index) => {
+    html = `
+      <option value="${key['username']}" id="${key['id']}">${key['username']}</option>
+    `
+    $('.form-select').append(html)
+  });
+  $('#full-detail').click(function () {
+    ids = $("#select-content").find('option:selected').attr('id')
+    window.location.href = `{% url 'contactdetail' id=0 %}`.replace("0", ids);
+  });
+</script>
+{% endblock %}

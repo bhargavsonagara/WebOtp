@@ -1,8 +1,8 @@
-# EventHogs_Web
+# Web OTP
 
 ## Index
 
-- [EventHogs_Web](#eventhogs_web)
+- [Web OTP](#web_otp)
   - [Index](#index)
     - [Introduction](#introduction)
     - [Installation](#installation)
@@ -24,7 +24,7 @@
 > ##### 1. Clone repository
 
 sh
-git clone http://172.16.16.51:9999/space-o/monil.t/eventhogs_web.git
+git clone https://github.com/bhargavsonagara/WebOtp.git
 
 
 > ##### 2. If you not having pip,Django let's install

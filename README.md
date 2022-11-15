@@ -24,9 +24,8 @@
 > ##### 1. Clone repository
 
 ```sh
-git clone http://172.16.16.51:9999/space-o/monil.t/eventhogs_web.git
+git clone https://github.com/bhargavsonagara/WebOtp.git
 ```
-
 
 > ##### 2. If you not having pip,Django let's install
 
@@ -86,7 +85,7 @@ python manage.py migrate
 python manage.py loaddata Data.json
 ```
 
-> ##### 11. Swagger UI will be available @ ``/api/schema/swagger-ui/``
+> ##### 11. Swagger UI will be available @ ``/swagger-ui/``
 
 <br />
 
